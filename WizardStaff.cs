@@ -10,7 +10,7 @@ public class WizardStaff : MonoBehaviour
     private Material default_material;
     public float force;
     private LineRenderer lineren;
-    public GameObject gun;
+    public GameObject staff;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +22,7 @@ public class WizardStaff : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        lineren.SetPosition(0, gun.transform.position);
+        lineren.SetPosition(0, staff.transform.position);
         if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
         {
             GameObject selected_object = hit.transform.gameObject;
